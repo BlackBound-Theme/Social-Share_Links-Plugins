@@ -1,0 +1,121 @@
+/* Social Share Pro - Admin Styles */
+
+.ssp-admin-wrap {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	max-width: 800px;
+	margin: 20px 0;
+}
+.ssp-admin-wrap h1 {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #1e1e1e;
+}
+.ssp-subtitle {
+	font-size: 15px;
+	color: #646970;
+	margin-bottom: 30px;
+}
+.ssp-admin-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.ssp-card {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+	border-radius: 8px;
+	padding: 24px;
+}
+.ssp-card h2 {
+	margin-top: 0;
+	font-size: 18px;
+	border-bottom: 1px solid #f0f0f1;
+	padding-bottom: 15px;
+	color: #1d2327;
+}
+.ssp-platforms-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 15px;
+	margin-top: 15px;
+}
+.ssp-platform-checkbox {
+	display: flex;
+	align-items: center;
+	padding: 12px 15px;
+	background: #f6f7f7;
+	border-radius: 6px;
+	border: 1px solid #dcdcde;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.ssp-platform-checkbox:hover {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+.ssp-platform-checkbox input {
+	margin-right: 10px;
+}
+.platform-name {
+	font-weight: 500;
+	color: #2c3338;
+}
+
+/* Switch Toggle CSS */
+.ssp-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+.ssp-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.ssp-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.ssp-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .ssp-slider {
+  background-color: #2271b1;
+}
+input:focus + .ssp-slider {
+  box-shadow: 0 0 1px #2271b1;
+}
+input:checked + .ssp-slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+.ssp-slider.round {
+  border-radius: 24px;
+}
+.ssp-slider.round:before {
+  border-radius: 50%;
+}
+.ssp-save-btn {
+	margin-top: 20px !important;
+	padding: 8px 24px !important;
+	font-size: 15px !important;
+}
