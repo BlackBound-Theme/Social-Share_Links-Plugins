@@ -1,0 +1,273 @@
+/* Base Blog Styling */
+:root {
+	--font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    background-color: #f9f9f9;
+    color: #333;
+}
+.demo-site-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    min-height: 100vh;
+}
+.demo-header {
+    background: #111;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+.demo-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.demo-header p {
+    margin: 10px 0 0;
+    color: #aaa;
+    font-size: 14px;
+}
+.demo-content {
+    padding: 40px;
+}
+.post-title {
+    font-size: 32px;
+    margin-top: 0;
+    line-height: 1.3;
+}
+.post-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 25px;
+}
+.post-image-placeholder {
+    width: 100%;
+    height: 350px;
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.post-body p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+.post-body h3 {
+    font-size: 24px;
+    margin: 40px 0 20px;
+}
+.post-body blockquote {
+    font-size: 22px;
+    font-style: italic;
+    border-left: 5px solid #2271b1;
+    margin: 40px 0;
+    padding: 20px;
+    background: #f4f8fa;
+    color: #555;
+}
+
+/* ==================================================== */
+/* SOCIAL SHARE PRO - PUBLIC STYLES (From actual plugin) */
+/* ==================================================== */
+
+:root {
+	--ssp-fb: #1877f2;
+	--ssp-tw: #000000;
+	--ssp-in: #0a66c2;
+	--ssp-wa: #25d366;
+	--ssp-pi: #e60023;
+	--ssp-re: #ff4500;
+	--ssp-te: #0088cc;
+	--ssp-em: #7f8c8d;
+	
+	--ssp-dark: #1f2937;
+	--ssp-light: #f3f4f6;
+	--ssp-text-dark: #ffffff;
+	--ssp-text-light: #1f2937;
+	
+	--ssp-btn-size: 40px;
+	--ssp-btn-spacing: 12px;
+	--ssp-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Inline Container */
+.ssp-inline-container {
+	margin: 30px 0;
+	padding: 20px 0;
+	border-top: 1px solid rgba(0,0,0,0.05);
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.ssp-inline-title {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 15px;
+	font-size: 16px;
+	color: #374151;
+}
+.ssp-button-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--ssp-btn-spacing);
+}
+
+/* Floating Sidebar Container */
+.ssp-floating-container {
+	position: fixed;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 99999;
+	display: flex;
+	flex-direction: column;
+	background: #ffffff;
+	box-shadow: 2px 0 10px rgba(0,0,0,0.08);
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	padding: var(--ssp-btn-spacing);
+}
+
+/* Demo Logo inside Floating Sidebar */
+.ssp-demo-logo-wrap {
+	text-align: center;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.temp-demo-logo {
+	max-width: 40px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.ssp-button-wrap-vertical {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+/* Base Button Styles */
+.ssp-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none !important;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	transition: var(--ssp-transition);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.ssp-btn svg {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+	transition: transform 0.3s ease;
+}
+.ssp-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.ssp-btn:hover svg {
+	transform: scale(1.1);
+}
+.ssp-platform-text {
+	margin-left: 8px;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+/* Floating Buttons */
+.ssp-floating-container .ssp-btn {
+	width: var(--ssp-btn-size);
+	height: var(--ssp-btn-size);
+}
+.ssp-floating-container .ssp-platform-text {
+	display: none;
+}
+
+/* Inline Layout Configurations */
+.ssp-inline-container .ssp-btn {
+	padding: 0 16px;
+	height: 42px;
+}
+
+/* --- Shapes --- */
+.ssp-shape-rounded .ssp-btn { border-radius: 6px; }
+.ssp-shape-circle .ssp-btn { border-radius: 50px; }
+.ssp-shape-square .ssp-btn { border-radius: 0; }
+.ssp-floating-container.ssp-shape-circle .ssp-btn { border-radius: 50%; }
+
+/* --- Themes --- */
+/* Official Theme */
+.ssp-theme-official .ssp-facebook { background: var(--ssp-fb); color: #fff; }
+.ssp-theme-official .ssp-twitter { background: var(--ssp-tw); color: #fff; }
+.ssp-theme-official .ssp-linkedin { background: var(--ssp-in); color: #fff; }
+.ssp-theme-official .ssp-whatsapp { background: var(--ssp-wa); color: #fff; }
+.ssp-theme-official .ssp-telegram { background: var(--ssp-te); color: #fff; }
+.ssp-theme-official .ssp-pinterest { background: var(--ssp-pi); color: #fff; }
+.ssp-theme-official .ssp-reddit { background: var(--ssp-re); color: #fff; }
+.ssp-theme-official .ssp-email { background: var(--ssp-em); color: #fff; }
+
+/* Responsive Rules */
+@media screen and (max-width: 768px) {
+	.ssp-floating-container {
+		top: auto;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transform: none;
+		flex-direction: row;
+		justify-content: center;
+		border-radius: 0;
+		padding: 10px;
+		z-index: 99999;
+	}
+	.ssp-floating-container .ssp-button-wrap-vertical {
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+	.ssp-demo-logo-wrap {
+		display: none;
+	}
+}
+
+/* Buy Now Float (Demo specific) */
+.ssp-demo-buy-btn {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background: #ff5722;
+	color: #fff !important;
+	padding: 15px 25px;
+	border-radius: 50px;
+	font-weight: 700;
+	font-size: 16px;
+	text-decoration: none;
+	box-shadow: 0 10px 20px rgba(255,87,34,0.3);
+	z-index: 100000;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.ssp-demo-buy-btn:hover {
+	transform: scale(1.05) translateY(-5px);
+	box-shadow: 0 15px 25px rgba(255,87,34,0.4);
+}
+.ssp-demo-buy-btn svg {
+	width: 20px;
+	height: 20px;
+}
